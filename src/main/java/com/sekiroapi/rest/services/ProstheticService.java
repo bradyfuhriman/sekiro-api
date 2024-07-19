@@ -27,7 +27,7 @@ public class ProstheticService {
         return repository.findAll();
     }
 
-    public Optional<Prosthetic> getProstheticByName(String name) {
-        return repository.findById(name);
+    public Optional<Prosthetic> getProstheticById(int id) {
+        return repository.findById(id);
     }
 }

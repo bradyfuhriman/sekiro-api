@@ -27,7 +27,7 @@ public class LocationService {
         return repository.findAll();
     }
 
-    public Optional<Location> getLocationByName(String name) {
-        return repository.findById(name);
+    public Optional<Location> getLocationById(int id) {
+        return repository.findById(id);
     }
 }

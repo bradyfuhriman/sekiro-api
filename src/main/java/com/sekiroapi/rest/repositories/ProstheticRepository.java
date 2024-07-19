@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.sekiroapi.rest.models.Prosthetic;
 
 @Repository
-public interface ProstheticRepository extends JpaRepository<Prosthetic, String> {
+public interface ProstheticRepository extends JpaRepository<Prosthetic, Integer> {
 
 }

@@ -38,8 +38,8 @@ public class MerchantController {
         return service.getMerchants();
     }
 
-    @GetMapping("/merchant/{name}")
-    public Optional<Merchant> findMerchantByName(@PathVariable String name) {
-        return service.getMerchantByName(name);
+    @GetMapping("/merchant/{id}")
+    public Optional<Merchant> findMerchantById(@PathVariable int id) {
+        return service.getMerchantById(id);
     }
 }

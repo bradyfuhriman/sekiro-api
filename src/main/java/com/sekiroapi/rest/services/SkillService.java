@@ -27,7 +27,7 @@ public class SkillService {
         return repository.findAll();
     }
 
-    public Optional<Skill> getSkillByName(String name) {
-        return repository.findById(name);
+    public Optional<Skill> getSkillById(int id) {
+        return repository.findById(id);
     }
 }

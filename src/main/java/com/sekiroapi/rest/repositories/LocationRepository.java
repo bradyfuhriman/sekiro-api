@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.sekiroapi.rest.models.Location;
 
 @Repository
-public interface LocationRepository extends JpaRepository<Location, String> {
+public interface LocationRepository extends JpaRepository<Location, Integer> {
 
 }

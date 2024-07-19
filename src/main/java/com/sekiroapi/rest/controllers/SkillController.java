@@ -38,8 +38,8 @@ public class SkillController {
         return service.getSkills();
     }
 
-    @GetMapping("/skill/{name}")
-    public Optional<Skill> findSkillByName(@PathVariable String name) {
-        return service.getSkillByName(name);
+    @GetMapping("/skill/{id}")
+    public Optional<Skill> findSkillById(@PathVariable int id) {
+        return service.getSkillById(id);
     }
 }

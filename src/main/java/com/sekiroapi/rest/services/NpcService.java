@@ -27,7 +27,7 @@ public class NpcService {
         return repository.findAll();
     }
 
-    public Optional<Npc> getNpcByName(String name) {
-        return repository.findById(name);
+    public Optional<Npc> getNpcById(int id) {
+        return repository.findById(id);
     }
 }

@@ -38,8 +38,8 @@ public class ProstheticController {
         return service.getProsthetics();
     }
 
-    @GetMapping("/prosthetic/{name}")
-    public Optional<Prosthetic> findProstheticByName(@PathVariable String name) {
-        return service.getProstheticByName(name);
+    @GetMapping("/prosthetic/{id}")
+    public Optional<Prosthetic> findProstheticById(@PathVariable int id) {
+        return service.getProstheticById(id);
     }
 }

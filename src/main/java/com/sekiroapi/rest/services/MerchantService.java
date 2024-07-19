@@ -27,7 +27,7 @@ public class MerchantService {
         return repository.findAll();
     }
 
-    public Optional<Merchant> getMerchantByName(String name) {
-        return repository.findById(name);
+    public Optional<Merchant> getMerchantById(int id) {
+        return repository.findById(id);
     }
 }

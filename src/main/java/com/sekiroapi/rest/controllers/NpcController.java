@@ -38,8 +38,8 @@ public class NpcController {
         return service.getNpcs();
     }
 
-    @GetMapping("/npc/{name}")
-    public Optional<Npc> findNpcByName(@PathVariable String name) {
-        return service.getNpcByName(name);
+    @GetMapping("/npc/{id}")
+    public Optional<Npc> findNpcById(@PathVariable int id) {
+        return service.getNpcById(id);
     }
 }

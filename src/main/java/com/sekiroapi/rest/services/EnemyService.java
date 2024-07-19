@@ -27,8 +27,8 @@ public class EnemyService {
         return repository.findAll();
     }
 
-    public Optional<Enemy> getEnemyByName(String name) {
-        return repository.findById(name);
+    public Optional<Enemy> getEnemyById(int id) {
+        return repository.findById(id);
     }
 
     public List<Enemy> getEnemiesByType(String type) {

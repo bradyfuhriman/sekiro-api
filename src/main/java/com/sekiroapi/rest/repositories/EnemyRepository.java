@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.sekiroapi.rest.models.Enemy;
 
 @Repository
-public interface EnemyRepository extends JpaRepository<Enemy, String> {
+public interface EnemyRepository extends JpaRepository<Enemy, Integer> {
 
     List<Enemy> findByType(String type);
 }

@@ -38,8 +38,8 @@ public class LocationController {
         return service.getLocations();
     }
 
-    @GetMapping("/location/{name}")
-    public Optional<Location> findLocationByName(@PathVariable String name) {
-        return service.getLocationByName(name);
+    @GetMapping("/location/{id}")
+    public Optional<Location> findLocationById(@PathVariable int id) {
+        return service.getLocationById(id);
     }
 }

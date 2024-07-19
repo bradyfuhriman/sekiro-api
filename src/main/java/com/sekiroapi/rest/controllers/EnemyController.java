@@ -38,9 +38,9 @@ public class EnemyController {
         return service.getEnemies();
     }
 
-    @GetMapping("/enemy/{name}")
-    public Optional<Enemy> findEnemyByName(@PathVariable String name) {
-        return service.getEnemyByName(name);
+    @GetMapping("/enemy/{id}")
+    public Optional<Enemy> findEnemyById(@PathVariable int id) {
+        return service.getEnemyById(id);
     }
 
     @GetMapping("/enemies/{type}")
