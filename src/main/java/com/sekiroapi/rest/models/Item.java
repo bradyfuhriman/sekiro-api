@@ -10,7 +10,7 @@ import lombok.Data;
 @Table(name = "items")
 public class Item {
     
-    @Id private int id;
+    @Id private String id;
     private String name;
     private String description;
     private String type;

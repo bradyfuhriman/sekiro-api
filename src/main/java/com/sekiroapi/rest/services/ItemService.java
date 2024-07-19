@@ -27,7 +27,7 @@ public class ItemService {
         return repository.findAll();
     }
 
-    public Optional<Item> getItemById(int id) {
+    public Optional<Item> getItemById(String id) {
         return repository.findById(id);
     }
 
