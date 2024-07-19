@@ -15,5 +15,5 @@ public class Item {
     private String description;
     private String type;
     private String effect;
-    private int capacity;
+    private String capacity;
 }
