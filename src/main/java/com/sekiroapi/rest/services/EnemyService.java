@@ -19,11 +19,11 @@ public class EnemyService {
         return repository.save(enemy);
     }
 
-    public List<Enemy> saveEnemys(List<Enemy> enemies) {
+    public List<Enemy> saveEnemies(List<Enemy> enemies) {
         return repository.saveAll(enemies);
     }
 
-    public List<Enemy> getEnemys() {
+    public List<Enemy> getEnemies() {
         return repository.findAll();
     }
 

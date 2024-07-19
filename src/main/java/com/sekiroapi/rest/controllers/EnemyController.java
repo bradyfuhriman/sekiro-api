@@ -30,12 +30,12 @@ public class EnemyController {
     @Hidden
     @PostMapping("/enemies/save-many")
     public List<Enemy> addEnemys(@RequestBody List<Enemy> enemies) {
-        return service.saveEnemys(enemies);
+        return service.saveEnemies(enemies);
     }
 
     @GetMapping("/enemies")
     public List<Enemy> findAllEnemys() {
-        return service.getEnemys();
+        return service.getEnemies();
     }
 
     @GetMapping("/enemy/{name}")
