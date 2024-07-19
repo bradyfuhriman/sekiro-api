@@ -1,5 +1,6 @@
 package com.sekiroapi.rest.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -12,7 +13,7 @@ public class Item {
     
     @Id private String id;
     private String name;
-    private String description;
+    @Column(length=1000) private String description;
     private String type;
     private String effect;
     private String capacity;
