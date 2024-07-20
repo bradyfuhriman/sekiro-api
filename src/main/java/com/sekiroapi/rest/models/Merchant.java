@@ -23,5 +23,5 @@ public class Merchant {
     
     @JsonManagedReference
     @OneToMany(mappedBy = "merchant", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    List<Good> goods;
+    List<Good> inventory;
 }
