@@ -18,10 +18,14 @@ To run Sekiro API locally, follow these steps:
 
 This project has not been endorsed or funded by FromSoftware, Inc. Neither Sekiro API nor its contributors have any association with the official game or its creators.
 
+## Legal
+
+- [Terms of Service](./docs/TERMS-OF-SERVICE.md)
+- [MIT License](./LICENSE)
+
+
 <div align="center">
-
   <p>Copyright &copy; 2024 Braden Fuhriman</p>
-
 </div>
 
 types below

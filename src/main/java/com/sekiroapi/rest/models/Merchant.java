@@ -19,6 +19,6 @@ public class Merchant {
     private int id;
     private String name;
     private String description;
-    private List<String> locations;
+    private String location;
     private List<String> goods; // many to many?
 }
