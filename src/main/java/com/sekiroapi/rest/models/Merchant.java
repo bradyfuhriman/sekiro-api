@@ -2,10 +2,13 @@ package com.sekiroapi.rest.models;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -20,5 +23,7 @@ public class Merchant {
     private String name;
     private String description;
     private String location;
-    private List<String> goods; // many to many?
+    
+    @OneToMany(mappedBy = "merchant", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    List<Good> goods;
 }
