@@ -16,5 +16,4 @@ public class Item {
     @Column(length=1000) private String description;
     private String type;
     private String effect;
-    private String capacity;
 }
