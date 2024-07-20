@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.sekiroapi.rest.models.Merchant;
 
 @Repository
-public interface MerchantRepository extends JpaRepository<Merchant, Integer> {
+public interface MerchantRepository extends JpaRepository<Merchant, String> {
 
 }
