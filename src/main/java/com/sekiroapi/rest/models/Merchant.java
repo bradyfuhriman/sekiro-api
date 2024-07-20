@@ -2,6 +2,8 @@ package com.sekiroapi.rest.models;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -23,6 +25,7 @@ public class Merchant {
     private String name;
     private String location;
     
+    @JsonManagedReference
     @OneToMany(mappedBy = "merchant", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     List<Good> goods;
 }
