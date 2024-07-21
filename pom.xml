@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sekiroapi</groupId>
-	<artifactId>sekiro-api</artifactId>
+	<artifactId>sekiroapi</artifactId>
 	<version>1.0.0</version>
-	<name>sekiro-api</name>
+	<name>sekiroapi</name>
 	<description>API for Sekiro: Shadows Die Twice</description>
 	<url/>
 	<licenses>
