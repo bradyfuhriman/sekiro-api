@@ -39,7 +39,7 @@ public class MerchantController {
     }
 
     @GetMapping("/merchant/{id}")
-    public Optional<Merchant> findMerchantById(@PathVariable int id) {
+    public Optional<Merchant> findMerchantById(@PathVariable String id) {
         return service.getMerchantById(id);
     }
 }
