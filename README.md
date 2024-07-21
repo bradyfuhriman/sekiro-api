@@ -23,6 +23,10 @@ Documentation generated using the OpenAPI Specification (OAS) is available [here
 
 To run Sekiro API locally, follow these steps:
 
+## Deployment
+
+Sekiro API is automatically deployed via [Render](https://render.com/) when a push is made to the main repository branch.
+
 ## Contributions
 
 ## Disclaimer
