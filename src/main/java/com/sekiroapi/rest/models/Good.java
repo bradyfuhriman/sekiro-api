@@ -1,6 +1,7 @@
 package com.sekiroapi.rest.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -14,7 +15,9 @@ import lombok.Data;
 @Table(name = "goods")
 public class Good {
     
-    @Id private String name;
+    @JsonIgnore
+    @Id private int id;
+    private String item;
     private String amount;
     private String cost;
 
