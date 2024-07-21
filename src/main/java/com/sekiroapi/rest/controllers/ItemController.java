@@ -38,7 +38,7 @@ public class ItemController {
         return service.getItems();
     }
 
-    @GetMapping("/item/{id}")
+    @GetMapping("/items/{id}")
     public Optional<Item> findItemById(@PathVariable String id) {
         return service.getItemById(id);
     }

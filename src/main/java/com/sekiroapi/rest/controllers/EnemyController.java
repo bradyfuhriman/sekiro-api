@@ -38,7 +38,7 @@ public class EnemyController {
         return service.getEnemies();
     }
 
-    @GetMapping("/enemy/{id}")
+    @GetMapping("/enemies/{id}")
     public Optional<Enemy> findEnemyById(@PathVariable int id) {
         return service.getEnemyById(id);
     }

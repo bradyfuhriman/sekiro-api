@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sekiroapi.rest.models.Merchant;
 import com.sekiroapi.rest.models.Npc;
+import com.sekiroapi.rest.services.MerchantService;
 import com.sekiroapi.rest.services.NpcService;
 
 import io.swagger.v3.oas.annotations.Hidden;
@@ -19,27 +21,52 @@ import io.swagger.v3.oas.annotations.Hidden;
 public class NpcController {
     
     @Autowired
-    private NpcService service;
+    private NpcService npcService;
+
+    @Autowired
+    private MerchantService merchantService;
 
     @Hidden
     @PostMapping("/npcs/save")
     public Npc addNpc(@RequestBody Npc npc) {
-        return service.saveNpc(npc);
+        return npcService.saveNpc(npc);
     }
 
     @Hidden
     @PostMapping("/npcs/save-many")
     public List<Npc> addNpcs(@RequestBody List<Npc> npcs) {
-        return service.saveNpcs(npcs);
+        return npcService.saveNpcs(npcs);
+    }
+
+    @Hidden
+    @PostMapping("/merchants/save")
+    public Merchant addMerchant(@RequestBody Merchant merchant) {
+        return merchantService.saveMerchant(merchant);
+    }
+
+    @Hidden
+    @PostMapping("/merchants/save-many")
+    public List<Merchant> addMerchants(@RequestBody List<Merchant> merchants) {
+        return merchantService.saveMerchants(merchants);
     }
 
     @GetMapping("/npcs")
     public List<Npc> findAllNpcs() {
-        return service.getNpcs();
+        return npcService.getNpcs();
     }
 
-    @GetMapping("/npc/{id}")
+    @GetMapping("/npcs/{id}")
     public Optional<Npc> findNpcById(@PathVariable int id) {
-        return service.getNpcById(id);
+        return npcService.getNpcById(id);
+    }
+
+    @GetMapping("/merchants")
+    public List<Merchant> findAllMerchants() {
+        return merchantService.getMerchants();
+    }
+
+    @GetMapping("/merchants/{id}")
+    public Optional<Merchant> findMerchantById(@PathVariable String id) {
+        return merchantService.getMerchantById(id);
     }
 }
