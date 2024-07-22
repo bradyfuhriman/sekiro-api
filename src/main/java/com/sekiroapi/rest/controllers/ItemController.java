@@ -59,4 +59,12 @@ public class ItemController {
     public List<Item> findItemsByType(@PathVariable String type) {
         return service.getItemsByType(type);
     }
+
+    @Operation(
+        description = "Search for an item using its name. This will query the database for case-insensitive partial matches in item names."
+    )
+    @GetMapping("/items/search/{name}")
+    public List<Item> findItemsByName(@PathVariable String name) {
+        return service.findItemsByName(name);
+    }
 }

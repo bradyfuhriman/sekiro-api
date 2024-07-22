@@ -34,4 +34,8 @@ public class ItemService {
     public List<Item> getItemsByType(String type) {
         return repository.findByType(type);
     }
+    
+    public List<Item> findItemsByName(String name) {
+        return repository.findByNameContainingIgnoreCase(name);
+    }
 }
