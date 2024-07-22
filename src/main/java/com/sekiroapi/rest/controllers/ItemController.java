@@ -45,7 +45,7 @@ public class ItemController {
     }
 
     @Operation(
-        description = "Get an item by its ID."
+        description = "Get an item with a specific ID."
     )
     @GetMapping("/item/{id}")
     public Optional<Item> findItemById(@PathVariable String id) {

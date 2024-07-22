@@ -45,7 +45,7 @@ public class EnemyController {
     }
 
     @Operation(
-        description = "Get an enemy by their ID."
+        description = "Get an enemy with a specific ID."
     )
     @GetMapping("/enemy/{id}")
     public Optional<Enemy> findEnemyById(@PathVariable int id) {

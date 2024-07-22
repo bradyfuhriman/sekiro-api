@@ -20,5 +20,5 @@ public class Skill {
     private int id;
     private String name;
     private String description;
-    private int cost;
+    private String cost;
 }

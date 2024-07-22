@@ -62,7 +62,7 @@ public class NpcController {
     }
 
     @Operation(
-        description = "Get an NPC by their ID."
+        description = "Get an NPC with a specific ID."
     )
     @GetMapping("/npc/{id}")
     public Optional<NPC> findNpcById(@PathVariable String id) {
@@ -78,7 +78,7 @@ public class NpcController {
     }
 
     @Operation(
-        description = "Get a merchant by their ID."
+        description = "Get a merchant with a specific ID."
     )
     @GetMapping("/merchants/{id}")
     public Optional<Merchant> findMerchantById(@PathVariable String id) {
