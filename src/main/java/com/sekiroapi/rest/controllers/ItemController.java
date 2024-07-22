@@ -14,8 +14,11 @@ import com.sekiroapi.rest.models.Item;
 import com.sekiroapi.rest.services.ItemService;
 
 import io.swagger.v3.oas.annotations.Hidden;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
+@Tag(name = "Items")
 public class ItemController {
     
     @Autowired
@@ -33,16 +36,25 @@ public class ItemController {
         return service.saveItems(items);
     }
 
+    @Operation(
+        description = "Get a list of all items in the game."
+    )
     @GetMapping("/items")
     public List<Item> findAllItems() {
         return service.getItems();
     }
 
-    @GetMapping("/items/{id}")
+    @Operation(
+        description = "Get an item by its ID."
+    )
+    @GetMapping("/item/{id}")
     public Optional<Item> findItemById(@PathVariable String id) {
         return service.getItemById(id);
     }
 
+    @Operation(
+        description = "Get a list of items of a particular type. Valid item types include ```key item```, ```progression item```, ```skill text```, ```document```, ```key```, ```memory```, ```remnant```, ```rot essence```, ```prosthetic upgrade```, ```upgrade material```, and ```consumable```."
+    )
     @GetMapping("/items/{type}")
     public List<Item> findItemsByType(@PathVariable String type) {
         return service.getItemsByType(type);

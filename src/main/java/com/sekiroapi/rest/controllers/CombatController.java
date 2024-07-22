@@ -14,8 +14,11 @@ import com.sekiroapi.rest.services.ProstheticService;
 import com.sekiroapi.rest.services.SkillService;
 
 import io.swagger.v3.oas.annotations.Hidden;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
+@Tag(name = "Combat")
 public class CombatController {
     
     @Autowired
@@ -48,11 +51,17 @@ public class CombatController {
         return prostheticService.saveProsthetics(prosthetics);
     }
 
+    @Operation(
+        description = "Get a list of all combat skills in the game."
+    )
     @GetMapping("/skills")
     public List<Skill> findAllSkills() {
         return skillService.getSkills();
     }
 
+    @Operation(
+        description = "Get a list of all prosthetic tools in the game."
+    )
     @GetMapping("/prosthetics")
     public List<Prosthetic> findAllProsthetics() {
         return prostheticService.getProsthetics();

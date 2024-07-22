@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sekiroapi.rest.models.Npc;
+import com.sekiroapi.rest.models.NPC;
 import com.sekiroapi.rest.repositories.NpcRepository;
 
 @Service
@@ -15,19 +15,19 @@ public class NpcService {
     @Autowired
     private NpcRepository repository;
 
-    public Npc saveNpc(Npc npc) {
+    public NPC saveNpc(NPC npc) {
         return repository.save(npc);
     }
 
-    public List<Npc> saveNpcs(List<Npc> npcs) {
+    public List<NPC> saveNpcs(List<NPC> npcs) {
         return repository.saveAll(npcs);
     }
 
-    public List<Npc> getNpcs() {
+    public List<NPC> getNpcs() {
         return repository.findAll();
     }
 
-    public Optional<Npc> getNpcById(int id) {
+    public Optional<NPC> getNpcById(String id) {
         return repository.findById(id);
     }
 }

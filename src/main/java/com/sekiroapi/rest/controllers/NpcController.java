@@ -11,13 +11,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sekiroapi.rest.models.Merchant;
-import com.sekiroapi.rest.models.Npc;
+import com.sekiroapi.rest.models.NPC;
 import com.sekiroapi.rest.services.MerchantService;
 import com.sekiroapi.rest.services.NpcService;
 
 import io.swagger.v3.oas.annotations.Hidden;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
+@Tag(name = "NPCs")
 public class NpcController {
     
     @Autowired
@@ -28,13 +31,13 @@ public class NpcController {
 
     @Hidden
     @PostMapping("/npcs/save")
-    public Npc addNpc(@RequestBody Npc npc) {
+    public NPC addNpc(@RequestBody NPC npc) {
         return npcService.saveNpc(npc);
     }
 
     @Hidden
     @PostMapping("/npcs/save-many")
-    public List<Npc> addNpcs(@RequestBody List<Npc> npcs) {
+    public List<NPC> addNpcs(@RequestBody List<NPC> npcs) {
         return npcService.saveNpcs(npcs);
     }
 
@@ -50,21 +53,33 @@ public class NpcController {
         return merchantService.saveMerchants(merchants);
     }
 
+    @Operation(
+        description = "Get a list of all NPCs in the game."
+    )
     @GetMapping("/npcs")
-    public List<Npc> findAllNpcs() {
+    public List<NPC> findAllNpcs() {
         return npcService.getNpcs();
     }
 
-    @GetMapping("/npcs/{id}")
-    public Optional<Npc> findNpcById(@PathVariable int id) {
+    @Operation(
+        description = "Get an NPC by their ID."
+    )
+    @GetMapping("/npc/{id}")
+    public Optional<NPC> findNpcById(@PathVariable String id) {
         return npcService.getNpcById(id);
     }
 
+    @Operation(
+        description = "Get a list of all merchants in the game."
+    )
     @GetMapping("/merchants")
     public List<Merchant> findAllMerchants() {
         return merchantService.getMerchants();
     }
 
+    @Operation(
+        description = "Get a merchant by their ID."
+    )
     @GetMapping("/merchants/{id}")
     public Optional<Merchant> findMerchantById(@PathVariable String id) {
         return merchantService.getMerchantById(id);

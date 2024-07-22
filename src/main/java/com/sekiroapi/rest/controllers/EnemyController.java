@@ -14,8 +14,11 @@ import com.sekiroapi.rest.models.Enemy;
 import com.sekiroapi.rest.services.EnemyService;
 
 import io.swagger.v3.oas.annotations.Hidden;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
+@Tag(name = "Enemies")
 public class EnemyController {
     
     @Autowired
@@ -33,16 +36,25 @@ public class EnemyController {
         return service.saveEnemies(enemies);
     }
 
+    @Operation(
+        description = "Get a list of all enemies in the game."
+    )
     @GetMapping("/enemies")
     public List<Enemy> findAllEnemies() {
         return service.getEnemies();
     }
 
-    @GetMapping("/enemies/{id}")
+    @Operation(
+        description = "Get an enemy by their ID."
+    )
+    @GetMapping("/enemy/{id}")
     public Optional<Enemy> findEnemyById(@PathVariable int id) {
         return service.getEnemyById(id);
     }
 
+    @Operation(
+        description = "Get a list of enemies of a particular type. Valid enemy types include ```common enemy```, ```mini-boss```, and ```main boss```."
+    )
     @GetMapping("/enemies/{type}")
     public List<Enemy> findEnemiesByType(@PathVariable String enemies) {
         return service.getEnemiesByType(enemies);

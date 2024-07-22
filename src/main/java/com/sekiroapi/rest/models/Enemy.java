@@ -1,7 +1,5 @@
 package com.sekiroapi.rest.models;
 
-import java.util.List;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,6 +18,6 @@ public class Enemy {
     private String name;
     private String description;
     private String type;
-    private List<String> locations;
-    private List<String> drops;
+    private String location;
+    private String drops;
 }
