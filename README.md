@@ -34,8 +34,3 @@ Contributions are welcome and encouraged! If you found a bug or have a feature r
 ## Disclaimer
 
 This project has not been endorsed or funded by FromSoftware, Inc. and neither Sekiro API nor its contributors are associated with the official game or its creators.
-
-<div align="center">
-  <p>Copyright &copy; 2024 Braden Fuhriman</p>
-</div>
-
