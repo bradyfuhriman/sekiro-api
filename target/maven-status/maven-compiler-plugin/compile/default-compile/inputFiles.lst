@@ -1,3 +1,4 @@
+/home/bfuhriman/sekiro-api/src/main/java/com/sekiroapi/rest/OpenApiConfig.java
 /home/bfuhriman/sekiro-api/src/main/java/com/sekiroapi/rest/SekiroApiApplication.java
 /home/bfuhriman/sekiro-api/src/main/java/com/sekiroapi/rest/controllers/CombatController.java
 /home/bfuhriman/sekiro-api/src/main/java/com/sekiroapi/rest/controllers/EnemyController.java
@@ -7,7 +8,7 @@
 /home/bfuhriman/sekiro-api/src/main/java/com/sekiroapi/rest/models/Good.java
 /home/bfuhriman/sekiro-api/src/main/java/com/sekiroapi/rest/models/Item.java
 /home/bfuhriman/sekiro-api/src/main/java/com/sekiroapi/rest/models/Merchant.java
-/home/bfuhriman/sekiro-api/src/main/java/com/sekiroapi/rest/models/Npc.java
+/home/bfuhriman/sekiro-api/src/main/java/com/sekiroapi/rest/models/NPC.java
 /home/bfuhriman/sekiro-api/src/main/java/com/sekiroapi/rest/models/Prosthetic.java
 /home/bfuhriman/sekiro-api/src/main/java/com/sekiroapi/rest/models/Skill.java
 /home/bfuhriman/sekiro-api/src/main/java/com/sekiroapi/rest/repositories/EnemyRepository.java

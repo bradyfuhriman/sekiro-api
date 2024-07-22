@@ -25,9 +25,11 @@ To run Sekiro API locally, follow these steps:
 
 ## Deployment
 
-Sekiro API is automatically deployed via [Render](https://render.com/) when a push is made to the main repository branch.
+Sekiro API is automatically deployed to [Render](https://render.com/) when a push is made to the main repository branch. This project currently uses their free tier which spins down with inactivity. This means that the API suffers from a "cold start" delay, and the first request to the API after a period of inactivity may take up to one minute.
 
 ## Contributions
+
+Contributions are welcome and encouraged! If you found a bug or have a feature request, please open an [issue](https://github.com/bradyfuhriman/sekiro-api/issues). If you would like to contribute directly, [fork](https://github.com/bradyfuhriman/sekiro-api/fork) this repository, open a [pull request](https://github.com/bradyfuhriman/sekiro-api/pulls) with your changes, and link the PR with an [issue](https://github.com/bradyfuhriman/sekiro-api/issues). Pull requests must recieve codeowner approval before being merged with the codebase.
 
 ## Disclaimer
 
@@ -35,7 +37,7 @@ This project has not been endorsed or funded by FromSoftware, Inc. and neither S
 
 ## Legal
 
-- [Terms of Service](./docs/TERMS-OF-SERVICE.md)
+- [Terms of Service](.TERMS-OF-SERVICE.md)
 - [MIT License](./LICENSE)
 
 <div align="center">
