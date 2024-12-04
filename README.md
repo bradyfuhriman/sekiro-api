@@ -17,7 +17,7 @@ Sekiro API is a free API that provides information about the video game **Sekiro
 
 ## Documentation
 
-Documentation generated using the OpenAPI Specification (OAS) is available [here](http://sekiroapi.com/) **-- Not Currently Hosted**.
+Documentation generated using the OpenAPI Specification (OAS) is available [here](http://sekiroapi.com/). **-- Not Currently Hosted**
 
 ## Disclaimer
 
